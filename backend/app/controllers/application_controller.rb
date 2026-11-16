@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::API
+  include Authenticable
+
   rescue_from ActiveRecord::RecordNotFound do
     render json: { errors: [ "Registro não encontrado" ] }, status: :not_found
   end
