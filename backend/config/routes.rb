@@ -8,6 +8,8 @@ Rails.application.routes.draw do
       post "auth/register", to: "auth#register"
       post "auth/login", to: "auth#login"
       get "auth/me", to: "auth#me"
+
+      resources :categories, only: %i[index create update destroy]
     end
   end
 end
