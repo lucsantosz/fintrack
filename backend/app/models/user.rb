@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   has_secure_password
 
+  has_many :categories, dependent: :destroy
+
   before_validation { self.email = email.to_s.strip.downcase }
 
   validates :name, presence: true, length: { maximum: 100 }
