@@ -1,0 +1,22 @@
+# Rails
+backend/log/*
+!backend/log/.keep
+backend/tmp/*
+!backend/tmp/.keep
+backend/storage/*
+!backend/storage/.keep
+backend/.bundle
+backend/config/*.key
+
+# Node
+node_modules/
+dist/
+
+# Variáveis de ambiente (o .env.example pode ir pro repositório)
+.env
+.env.*
+!.env.example
+
+# Sistema e editor
+.DS_Store
+.vscode/
