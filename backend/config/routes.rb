@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       get "auth/me", to: "auth#me"
 
       resources :categories, only: %i[index create update destroy]
+      resources :transactions, only: %i[index show create update destroy]
     end
   end
 end

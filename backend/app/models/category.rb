@@ -1,5 +1,6 @@
 class Category < ApplicationRecord
   belongs_to :user, optional: true
+  has_many :transactions, dependent: :restrict_with_error
 
   enum :kind, { income: 0, expense: 1 }, validate: true
 
